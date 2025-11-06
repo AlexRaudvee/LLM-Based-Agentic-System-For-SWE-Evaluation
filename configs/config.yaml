@@ -1,0 +1,25 @@
+# Global configuration for the agent + evaluation
+seed: 42
+
+model:
+  provider: "transformers"    # or "openai", "vllm", etc.
+  name: "qwen3-0_6b"          # placeholder; replace with your served model id
+  max_new_tokens: 256
+  temperature: 0.2
+  top_p: 0.95
+
+agent:
+  max_iters: 6
+  react: true
+
+sandbox:
+  timeout_sec: 5
+  memory_mb: 256
+  network: false
+
+dataset:
+  source: "humanevalfix"
+  subset_size: 50
+
+evaluation:
+  pass_k: 1

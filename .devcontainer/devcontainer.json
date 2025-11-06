@@ -1,0 +1,21 @@
+{
+  "name": "LLM-Based-Agentic-System-For-SWE",
+  "dockerFile": "../Dockerfile",
+  "context": "..",
+  "runArgs": ["--shm-size=2g"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "github.vscode-pull-request-github"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.testing.pytestEnabled": true
+      }
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}
